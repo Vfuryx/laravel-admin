@@ -33,7 +33,7 @@ Component.options.__file = "resources/assets/js/components/page/Login.vue"
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -62,13 +62,13 @@ var content = __webpack_require__(656);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(207)("2a46d9d0", content, false, {});
+var update = __webpack_require__(207)("d930ae48", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bc34a0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Login.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bc34a0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Login.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@1.0.1@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bc34a0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@1.0.1@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08bc34a0\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(61)(false);
 
 
 // module
-exports.push([module.i, "\n.login-wrap[data-v-08bc34a0] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  background-image: url(/img/login-bg.jpg);\n  background-size: 100%;\n}\n.ms-title[data-v-08bc34a0] {\n  width: 100%;\n  line-height: 50px;\n  text-align: center;\n  font-size: 20px;\n  color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.ms-login[data-v-08bc34a0] {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 350px;\n  margin: -190px 0 0 -175px;\n  border-radius: 5px;\n  background: rgba(255, 255, 255, 0.3);\n  overflow: hidden;\n}\n.ms-content[data-v-08bc34a0] {\n  padding: 30px 30px;\n}\n.login-btn[data-v-08bc34a0] {\n  text-align: center;\n}\n.login-btn button[data-v-08bc34a0] {\n  width: 100%;\n  height: 36px;\n  margin-bottom: 10px;\n}\n.login-tips[data-v-08bc34a0] {\n  font-size: 12px;\n  line-height: 30px;\n  color: #fff;\n}\n.yzc[data-v-08bc34a0] {\n  right: 0;\n  top: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.login-wrap[data-v-08bc34a0] {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  background-image: url(/img/login-bg.jpg);\n  background-size: 100%;\n}\n.ms-title[data-v-08bc34a0] {\n  width: 100%;\n  line-height: 50px;\n  text-align: center;\n  font-size: 20px;\n  color: #fff;\n  border-bottom: 1px solid #ddd;\n}\n.ms-login[data-v-08bc34a0] {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 350px;\n  margin: -190px 0 0 -175px;\n  border-radius: 5px;\n  background: rgba(255, 255, 255, 0.3);\n  overflow: hidden;\n}\n.ms-content[data-v-08bc34a0] {\n  padding: 30px 30px;\n}\n.login-btn[data-v-08bc34a0] {\n  text-align: center;\n}\n.login-btn button[data-v-08bc34a0] {\n  width: 100%;\n  height: 36px;\n  margin-bottom: 10px;\n}\n.login-tips[data-v-08bc34a0] {\n  font-size: 12px;\n  line-height: 30px;\n  color: #fff;\n}\n.yzc-ipt .el-input-group[data-v-08bc34a0]{\n  line-height: 0;\n}\n.yzc[data-v-08bc34a0]{\n  padding: 0;\n  margin-top: -4px;\n}\n.yzc img[data-v-08bc34a0]{\n  height: 30px;\n}\n\n", ""]);
 
 // exports
 
@@ -309,39 +309,46 @@ var render = function() {
             _vm._v(" "),
             _c(
               "el-form-item",
-              { attrs: { prop: "code" } },
+              { staticClass: "yzc-ipt", attrs: { prop: "code" } },
               [
-                _c("span", { staticClass: "svg-container" }, [
-                  _c("i", { staticClass: "iconfont bf-yzm" })
-                ]),
-                _vm._v(" "),
-                _c("el-input", {
-                  attrs: {
-                    name: "yzCode",
-                    type: "text",
-                    placeholder: "请输入验证码",
-                    id: "yzCode"
-                  },
-                  model: {
-                    value: _vm.ruleForm.code,
-                    callback: function($$v) {
-                      _vm.$set(_vm.ruleForm, "code", $$v)
-                    },
-                    expression: "ruleForm.code"
-                  }
-                }),
-                _vm._v(" "),
                 _c(
-                  "span",
+                  "el-input",
                   {
-                    staticClass: "show-pwd yzc",
-                    on: {
-                      click: function($event) {
-                        _vm.getCode()
-                      }
+                    attrs: { type: "text", placeholder: "请输入验证码" },
+                    model: {
+                      value: _vm.ruleForm.code,
+                      callback: function($$v) {
+                        _vm.$set(_vm.ruleForm, "code", $$v)
+                      },
+                      expression: "ruleForm.code"
                     }
                   },
-                  [_c("img", { attrs: { src: _vm.src, alt: "" } })]
+                  [
+                    _c("el-button", {
+                      attrs: { slot: "prepend", icon: "el-icon-lx-edit" },
+                      slot: "prepend"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "el-button",
+                      {
+                        staticClass: "yzc",
+                        attrs: { slot: "append" },
+                        slot: "append"
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: _vm.src, alt: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.getCode()
+                            }
+                          }
+                        })
+                      ]
+                    )
+                  ],
+                  1
                 )
               ],
               1
@@ -380,7 +387,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-08bc34a0", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-08bc34a0", module.exports)
   }
 }
 

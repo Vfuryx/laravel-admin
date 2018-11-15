@@ -33,7 +33,7 @@ Component.options.__file = "resources/assets/js/components/page/Permission.vue"
 
 /* hot reload */
 if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
   hotAPI.install(require("vue"), false)
   if (!hotAPI.compatible) return
   module.hot.accept()
@@ -62,13 +62,13 @@ var content = __webpack_require__(644);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(207)("540f168e", content, false, {});
+var update = __webpack_require__(207)("937b5d54", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e232528\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Permission.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e232528\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Permission.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@1.0.1@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e232528\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Permission.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@1.0.1@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4e232528\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Permission.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(61)(false);
 
 
 // module
-exports.push([module.i, "\nh1[data-v-4e232528]{\r\n    text-align: center;\r\n    margin: 30px 0;\n}\np[data-v-4e232528]{\r\n    line-height: 30px;\r\n    margin-bottom: 10px;\r\n    text-indent: 2em;\n}\n.logout[data-v-4e232528]{\r\n    color: #409EFF;\n}\r\n", ""]);
+exports.push([module.i, "\nh1[data-v-4e232528]{\n    text-align: center;\n    margin: 30px 0;\n}\np[data-v-4e232528]{\n    line-height: 30px;\n    margin-bottom: 10px;\n    text-indent: 2em;\n}\n.logout[data-v-4e232528]{\n    color: #409EFF;\n}\n", ""]);
 
 // exports
 
@@ -182,7 +182,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4e232528", module.exports)
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-4e232528", module.exports)
   }
 }
 

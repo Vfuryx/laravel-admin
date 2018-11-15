@@ -13,14 +13,14 @@
                         <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
                     </el-input>
                 </el-form-item>
-                <el-form-item prop="code">
-                    <span class="svg-container">
-                      <i class="iconfont bf-yzm"></i>
-                    </span>
-                    <el-input name="yzCode" type="text" v-model="ruleForm.code" placeholder="请输入验证码" id="yzCode"></el-input>
-                    <span class="show-pwd yzc" @click="getCode()">
-                        <img :src="src" alt="">
-                    </span>
+
+                <el-form-item prop="code" class="yzc-ipt">
+                    <el-input type="text" placeholder="请输入验证码" v-model="ruleForm.code" >
+                        <el-button slot="prepend" icon="el-icon-lx-edit"></el-button>
+                        <el-button slot="append" class="yzc">
+                          <img :src="src" alt="" @click="getCode()">
+                        </el-button>
+                    </el-input>
                 </el-form-item>
                 <div class="login-btn">
                     <el-button type="primary" :loading="loading" @click="submitForm('ruleForm')">登录</el-button>
@@ -49,7 +49,7 @@ export default {
         code: [{ required: true, message: "请输入验证码", trigger: "blur" }]
       },
       src: "",
-      loading: false,
+      loading: false
     };
   },
   methods: {
@@ -147,9 +147,15 @@ export default {
   line-height: 30px;
   color: #fff;
 }
-
-.yzc {
-  right: 0;
-  top: 5px;
+.yzc-ipt .el-input-group{
+  line-height: 0;
 }
+.yzc{
+  padding: 0;
+  margin-top: -4px;
+}
+.yzc img{
+  height: 30px;
+}
+
 </style>
